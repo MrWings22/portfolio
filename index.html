@@ -26,14 +26,21 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <img src="res/images/icon1.png" alt="Albin Thomas" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;">
-        <a class="navbar-brand" href="#">ALBIN THOMAS</a>
+    <div class="container d-flex justify-content-between">
+        <!-- Left Side: Logo & Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="res/images/icon1.png" alt="Albin Thomas" class="brand-logo">
+            <span class="brand-name">ALBIN THOMAS</span>
+        </a>
+
+        <!-- Toggle Button (Mobile) -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+
+        <!-- Right Side: Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
@@ -43,7 +50,6 @@
         </div>
     </div>
 </nav>
-
 <!-- Home Section -->
 <header id="home" class="full-screen">
     <div class="container">
@@ -68,8 +74,8 @@
             </div>
 
             <!-- About Info -->
-            <div class="col-md-8">
-                <ul class="list-unstyled" font-size="10px">
+            <div class="col-md-4">
+                <ul class="list-unstyled">
                     <li><strong>Age:</strong> 21</li>
                     <li><strong>Location:</strong> Kottayam, Kerala, India</li>
                     <li><strong>Phone:</strong> <a href="tel:+917591944054">+91 7591944054</a></li>
@@ -80,46 +86,63 @@
             </div>
         </div>
 
+        <!-- Music Player Section -->
+        <div class="col-md-4 text-center">
+            <div class="music-card p-3 shadow-sm rounded">
+                <script>onclick="playSong('spotify:track:5e9TFTbltYBg2xThimr0rU')"</script>
+                <!-- Spotify Music Player -->
+<div id="spotify-player"></div>
+
+<!-- Stylish Buttons -->
+<div class="music-controls">
+    <button class="music-btn" onclick="prevSong()">⏮️ Previous</button>
+    <button class="music-btn" onclick="nextSong()">⏭️ Next</button>
+</div>
+
+            </div>
+        </div>
+
         <hr> <!-- Divider Line -->
 
-<!-- Skills Section -->
-<h3 class="text-center"></i> Skills</h3>
-<div class="row">
-    <!-- Programming Skills -->
-    <div class="col-md-4">
-        <h4> Programming</h4>
-        <ul class="list-unstyled">
-            <li><i class="fab fa-java text-danger"></i> Java</li>
-            <li><i class="fab fa-python text-warning"></i> Python</li>
-            <li><i class="fab fa-php text-info"></i> PHP</li>
-            <li><i class="fas fa-code text-secondary"></i> C++</li>
-            <li><i class="fas fa-database text-dark"></i> SQL</li>
-        </ul>
-    </div>
+        <!-- Skills Section -->
+        <h3 class="text-center"></i> Skills</h3>
+        <div class="row">
+            <!-- Programming Skills -->
+            <div class="col-md-4">
+                <h4> Programming</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fab fa-java text-danger"></i> Java</li>
+                    <li><i class="fab fa-python text-warning"></i> Python</li>
+                    <li><i class="fab fa-php text-info"></i> PHP</li>
+                    <li><i class="fas fa-code text-secondary"></i> C++</li>
+                    <li><i class="fas fa-database text-dark"></i> SQL</li>
+                </ul>
+            </div>
 
-    <!-- Web Development -->
-    <div class="col-md-4">
-        <h4> Web Development</h4>
-        <ul class="list-unstyled">
-            <li><i class="fab fa-html5 text-danger"></i> HTML</li>
-            <li><i class="fab fa-css3-alt text-primary"></i> CSS</li>
-            <li><i class="fab fa-js text-warning"></i> JavaScript</li>
-            <li><i class="fas fa-cogs text-dark"></i> APIs</li>
-            <li><i class="fab fa-python text-success"></i> Django</li>
-        </ul>
-    </div>
+            <!-- Web Development -->
+            <div class="col-md-4">
+                <h4> Web Development</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fab fa-html5 text-danger"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt text-primary"></i> CSS</li>
+                    <li><i class="fab fa-js text-warning"></i> JavaScript</li>
+                    <li><i class="fas fa-cogs text-dark"></i> APIs</li>
+                    <li><i class="fab fa-python text-success"></i> Django</li>
+                </ul>
+            </div>
 
-    <!-- Tools & Technologies -->
-    <div class="col-md-4">
-        <h4> Tools & Technologies</h4>
-        <ul class="list-unstyled">
-            <li><i class="fab fa-linux text-dark"></i> Linux</li>
-            <li><i class="fab fa-git-alt text-danger"></i> Git</li>
-            <li><i class="fas fa-code text-info"></i> VS Code</li>
-        </ul>
-    </div>
-</div>
-       <hr> <!-- Divider Line -->
+            <!-- Tools & Technologies -->
+            <div class="col-md-4">
+                <h4> Tools & Technologies</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fab fa-linux text-dark"></i> Linux</li>
+                    <li><i class="fab fa-git-alt text-danger"></i> Git</li>
+                    <li><i class="fas fa-code text-info"></i> VS Code</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr> <!-- Divider Line -->
 
         <!-- Additional Interests -->
         <p><i class="fas fa-lightbulb text-warning"></i> Outside of coding, I enjoy exploring new technology, astronomy, diving into sci-fi stories, and solving problems to create sustainable innovations.</p>
@@ -256,11 +279,11 @@
             <a href="https://github.com/MrWings22" target="_blank" title="GitHub">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.instagram.com/your_instagram" target="_blank" title="Instagram">
+            <a href="https://www.instagram.com/albin._.thomas" target="_blank" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://x.com/your_username" target="_blank" title="X (Twitter)">
-                <i class="fab fa-x-twitter"></i>
+            <!-- <a href="https://x.com/your_username" target="_blank" title="X (Twitter)">
+                <i class="fab fa-x-twitter"></i> -->
             </a>
             <a href="https://t.me/Mrwings22" target="_blank" title="Telegram">
                 <i class="fab fa-telegram"></i>
@@ -272,13 +295,63 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-    // Hide loader after page loads
-    window.onload = function() {
-        setTimeout(() => {
-            document.getElementById('loader').style.display = 'none';
-        }, 1500);
-    };
+    document.addEventListener("DOMContentLoaded", function () {
+        let navLinks = document.querySelectorAll(".nav-link");
+        let navCollapse = document.querySelector(".navbar-collapse");
+
+        navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+                if (window.innerWidth < 992) { // Close only on mobile
+                    let bsCollapse = new bootstrap.Collapse(navCollapse, { toggle: false });
+                    bsCollapse.hide();
+                }
+            });
+        });
+    });
+// List of Spotify track URIs (Replace with your favorite songs)
+const songs = [
+    "spotify:track:5e9TFTbltYBg2xThimr0rU", // Example song 1
+    "spotify:track:3tjFYV6RSFtuktYl3ZtYcq", // Example song 2
+    "spotify:track:1rfofaqEpACxVEHIZBJe6W"  // Example song 3
+];
+
+let currentSongIndex = 0;
+
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+    }, 1500);
+
+    // Load the first song
+    playSong(songs[currentSongIndex]);
+};
+
+function playSong(spotifyURI) {
+    const playerDiv = document.getElementById("spotify-player");
+    playerDiv.innerHTML = `
+        <iframe id="spotify-iframe" style="border-radius:12px" 
+            src="https://open.spotify.com/embed/track/${spotifyURI.split(':')[2]}" 
+            width="100%" height="80" frameborder="0" 
+            allow="autoplay; encrypted-media">
+        </iframe>
+    `;
+}
+
+// Function to play the next song
+function nextSong() {
+    currentSongIndex = (currentSongIndex + 1) % songs.length; // Loop through songs
+    playSong(songs[currentSongIndex]);
+}
+
+// Function to play the previous song
+function prevSong() {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    playSong(songs[currentSongIndex]);
+}
+
 </script>
 
 </body>
