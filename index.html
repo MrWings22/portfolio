@@ -15,7 +15,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!--Costum css-->
-    <link rel="stylesheet" href="res/css/styles.css">
+    <link rel="stylesheet" href="res/styles.css">
 </head>
 <body class="light-mode">
 
@@ -245,7 +245,7 @@
 <!-- Contact Section -->
 <section id="contact" class="full-screen">
     <div class="container text-center">
-        <h2>Contact Me</h2>
+        <h2>Connect with Me</h2>
         <div class="contact-icons">
             <a href="mailto:albinthomas6210@gmail.com" target="_blank" title="Email">
                 <i class="fas fa-envelope"></i>
@@ -265,6 +265,23 @@
             <a href="https://t.me/Mrwings22" target="_blank" title="Telegram">
                 <i class="fab fa-telegram"></i>
             </a>
+        </div>
+
+        <!-- Send Message Form -->
+        <div class="contact-form mt-5">
+            <h3>Send Me a Message</h3>
+            <form action="send_message.php" method="POST" class="mt-4">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </div>
     </div>
 </section>
